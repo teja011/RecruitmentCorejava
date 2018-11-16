@@ -1,0 +1,57 @@
+CREATE TABLE CustomerDetails (
+   Applicant_name varchar2(20),
+ date_of_birth date ,
+ martial_status varchar2(10),
+ phone_number number,
+ mobile_number number,
+ CountofDependents number,
+ email_id varchar2(20),
+ Application_ID REFERENCES LoanApplication(Application_ID)
+);
+
+
+
+
+
+CREATE  TABLE LoanApplication (
+Application_ID number primary key,
+application_date date,
+Loan_program varchar2(10),
+AmountofLoan number,
+AddressofProperty varchar2(30),
+AnnualFamilyIncome varchar2(20),
+DocumentProofsAvailable varchar2(50),
+GuaranteeCover varchar2(20),
+MarketValueofGuaranteeCover number,
+Status varchar2(10),
+DateOfInterview date
+);
+
+//TABLE =LOANPROGRAMOFFERED
+
+CREATE TABLE LoanProgramsOffered (
+programName varchar2(5),
+description varchar2(20),
+type varchar2(20),
+durationinyears number,
+minloanamount number,
+maxloanamount number,
+rateofinterest number,
+proofs_required varchar2(20));
+
+
+
+//TABLE=APPROVEDLOANS
+CREATE TABLE ApprovedLoans (
+  Application_ID number REFERENCES LoanApplication(Application_ID),
+Customer_name varchar(20),
+amountofloangranted number,
+monthlyinstallment number,
+rateofinterest number,
+totalamountpayable number);
+
+
+
+//TABLE=USERS
+
+CREATE TABLE Recruitmentlogin(login_id varchar(10),password varchar(10),role varchar(10));

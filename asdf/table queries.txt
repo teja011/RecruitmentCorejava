@@ -1,0 +1,28 @@
+//loanapplication table
+SQL> insert into loanapplication values( 1001, '10-may-2018', 'home loan', 500000, 'hinjewadi,pune', 1500000, 'yes', 'yes', 1234, 'applied', '12-dec-2018' );
+SQL> insert into loanapplication values( 1002, '10-aug-2018', 'personal', 600000, 'bhosari,pune', 1500000, 'yes', 'yes', 1234, 'applied', '15-dec-2018' );
+
+ 
+//customerdetails table
+SQL> insert into customerdetails values( 'chirag', '12-aug-1997', 'single', 0123456789, 0123456789, 2, 'chirag@gmail.com', 1001);
+SQL> insert into customerdetails values( 'prateek', '10-jul-1996', 'single', 0123456789, 0123456789, 5, 'prateek@gmail.com', 1002);
+
+//approvedloans table
+
+SQL> insert into approvedloans values(1001, 'kaushal', 870000, 34000, 12, 900000);
+SQL> insert into approvedloans values(1002, 'mohan', 870000, 34000, 12, 900000);
+
+//users table
+insert into Recruitmentlogin values( 'Tejas','Tejas','admin');
+insert into Recruitmentlogin values( 'Dinesh','Dinesh','admin');
+insert into Recruitmentlogin values( 'Arkjeet','Arkjeet','company');
+insert into Recruitmentlogin values( 'Mayur','Mayur','company');
+insert into Recruitmentlogin values( 'Harsha','Harsha','candidate');
+insert into Recruitmentlogin values( 'Shreya','Shreya','candidate');
+
+
+
+//loanprogramsoffered table
+
+SQL> insert into loanprogramsoffered values( 'p1', 'home loan', 'loan', 6, 300000, 1000000, 15, 'yes');
+SQL> insert into loanprogramsoffered values( 'p2', 'personal loan', 'loan', 6, 50000, 1500000, 12, 'yes');
